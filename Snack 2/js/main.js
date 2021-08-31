@@ -23,6 +23,15 @@ for (let i = 0 ; i < squadre.length ; i++) {
 
 console.log(squadre);
 
+let falliSquadre = [];
+
+for (let i = 0 ; i < squadre.length ; i++) {
+    let {nome, falliSubiti} = squadre[i];
+    falliSquadre.push(nome, falliSubiti);
+}
+
+console.log(falliSquadre);
+
 
 
 
