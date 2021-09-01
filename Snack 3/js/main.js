@@ -9,7 +9,7 @@
 let arrayLength = 10
 let numberContainer = [];
 
-for (i = 0 ; i < arrayLength ; i++) {
+while (numberContainer.length != arrayLength) {
     let numberToPush = (getRndInteger(1, 50));
     if (numberContainer.includes(numberToPush) == false) {
         numberContainer.push(numberToPush);
@@ -32,14 +32,19 @@ console.log(a, b);
 
 // RESTITUISCO UN NUOVO ARRAY TRAMITE UNA FUNZIONE CHE CONTENGA SOLO I NUMERI COMPRESI TRA A E B
 
-const numeriCompresi = numberContainer.filter((array) => {
-    if (a < array && b > array) {
-        return true;
-    }
-    return false;   
-});
+const myFunction = (array, a, b) => {
 
-console.log(numeriCompresi);
+    const numeriCompresi = numberContainer.filter((array) => {
+        if (array >= a && array <= b) {
+            return true;
+        }
+        return false;   
+    });
+
+    return numeriCompresi;
+}
+
+console.log(myFunction(numberContainer, a, b))
 
 // FUNZIONI 
 
